@@ -1,4 +1,4 @@
-## Dockerized run (NOTE: NVIDIA-DOCKER!!! NOT just Docker)
+## Dockerized run (NVIDIA-DOCKER for gpu acceleration)
 to build docker container
 ```
 $ ./build.bat 
