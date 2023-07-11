@@ -1,20 +1,9 @@
 {
-    "constMD": {
-        "run_this": 0,
         "random_seed": 42,
         "md_duration_in_ns": 0.1,              
         "time_step_in_fs": 2.0, 
-        "enzyme_pdb": "enzyme.pdb",             
-        "docked_substrate_pdb": "res.pdb",   
-        "constraint_enzyme_atom": "ASP170@OD2",
-        "constraint_substrate_atom": "C3"
-    },
-    "normalMD": {
-        "run_this": 1,
-        "random_seed": 42,
-        "md_duration_in_ns": 0.1,              
-        "time_step_in_fs": 2.0, 
-        "enzyme_pdb": "enzyme.pdb",           
-        "docked_substrate_pdb": "res.pdb"   
-    }
+        "target_pdb": "enzyme.pdb",           
+        "small_molecule_pdb": "res.pdb",
+	"substrate_net_charge": 0
+
 }

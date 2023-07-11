@@ -217,12 +217,12 @@ def prep_md_parameter_files(enzFile, subFile, net_charge):
     return True
 
 def step1_Prep(inputD):
-    print()
-    print('====================================================')
-    for k, v in inputD.items():
-        print(f"{k:<{20}} : {v}")
-    print('====================================================')
-    print()
+    # print()
+    # print('====================================================')
+    # for k, v in inputD.items():
+    #     print(f"{k:<{20}} : {v}")
+    # print('====================================================')
+    # print()
 
     print("\nStep1: Preparation of parameter files from PDBs\n")
     enz_pdb = inputD['enz_pdb']

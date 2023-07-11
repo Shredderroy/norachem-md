@@ -68,21 +68,21 @@ def check_substrate_constAtom(subFile, constSubAtom):
         return False
     return True
 
-def assert_option(option_number, data):
+def assert_option(data):
          
-    args_list = data[optionD[option_number]]
+    args_list = data
     inputD = dict()
 
 
     enz_pdb = args_list['target_pdb']
     if not exists(enz_pdb):
         print(f"\nError: can't find {target_pdb}\n")
-    return False
+        return False
 
     sub_pdb = args_list['small_molecule_pdb']
     if not exists(sub_pdb):
         print(f"\nError: can't find {small_molecule_pdb}\n")
-    return False
+        return False
     
     const_enz_atom = ""
     const_sub_atom =  ""
@@ -107,17 +107,17 @@ def assert_input_json():
     with open('input.json', 'r') as f:
         data = json.load(f)
     
-    options = [data[f"{opt}"]["run_this"] for opt in optionD.values()]
+    # options = [data[f"{opt}"]["run_this"] for opt in optionD.values()]
 
-    if sum(options) > 1:
-        print()
-        print("Error: must select only one option ")
-        print("       by setting run_this field 1 in input.json")
-        print()
-        return False 
+    # if sum(options) > 1:
+    #     print()
+    #     print("Error: must select only one option ")
+    #     print("       by setting run_this field 1 in input.json")
+    #     print()
+    #     return False 
 
-    sel_option = options.index(1)
-    inputOK = assert_option(sel_option, data)
+    # sel_option = options.index(1)
+    inputOK = assert_option(data)
     return inputOK
 
 
@@ -126,6 +126,7 @@ if __name__ == '__main__':
 
     # check input.json
     inputD = assert_input_json()
+    print(inputD)
     step1_Prep(inputD)
     step2_Simulation(inputD)
     step3_Energy()
