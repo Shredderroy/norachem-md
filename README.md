@@ -13,8 +13,8 @@ $ nvidia-docker run --rm -v $(pwd)/:/eval/ -w="/eval/"  norachem-md:v0
 ```
 [/]$ conda env create -f environment.yml
 [/]$ conda activate SIM
-(SIM)[/]$ cd constMD_example
-(SIM)[constMD_example/]$ python ../src/SIM.py
+(SIM)[/]$ cd normalMD_example
+(SIM)[normalMD_example/]$ python ../src/SIM.py
 
 ```
 ## Output Result Files
